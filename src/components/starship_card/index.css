@@ -1,0 +1,18 @@
+.card{
+    background-color: rgb(19, 84, 19);
+    border: 2px solid black;
+    border-radius: 3%;
+    padding: 2rem 0;
+    width: 200px;
+    color: white;
+    
+
+}
+
+#cardlist{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.8rem;
+    
+}
