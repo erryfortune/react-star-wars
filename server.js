@@ -11,19 +11,19 @@ const cors = require('cors')
 
 const app = express()
 
-//access
+//access from anywhere
 app.use(cors({
     origin: "*"
 }))
 
 
-// logs different requests to our server
+// logs different requests to the server
 app.use(logger('dev'))
 
-// parse stringified json objects
+// parsed  json objects
 app.use(express.json())
 
-// serve our build folder
+// serves the build folder
 app.use(express.static(path.join(__dirname, 'build')))
 
 app.get('/get_starships',async (req, res) =>{
@@ -35,12 +35,12 @@ app.get('/get_starships',async (req, res) =>{
 } )
 
 
-// Catch-all route
+// all routes
 app.get('/*', function(req, res) {
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
   });
 
 
-app.listen(4000, () => {
-    console.log(`Server is Listening on 4000..`)
+app.listen(5000, () => {
+    console.log(`Server is Listening on 5000...`)
 })
